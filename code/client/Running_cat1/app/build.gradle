@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            storeFile file('/Users/yanzhensong/.android/debug.keystore')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId "com.example.lucas.running_cat1"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/locSDK_3.1.jar')
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/baidumapapi_base_v3_6_1.jar')
+    compile files('libs/commons-codec-1.9.jar')
+    compile files('libs/apache/fluent-hc-4.5.2.jar')
+    compile files('libs/commons-logging-1.2.jar')
+    compile files('libs/baidumapapi_radar_v3_6_0.jar')
+    compile files('libs/baidumapapi_map_v3_6_1.jar')
+    compile files('libs/slidingmenu_library-11518fa848cd06c8cfb4f6591ea0a45c.jar')
+    compile files('libs/IndoorscapeAlbumPlugin.jar')
+    compile files('libs/httpmime-4.1.2.jar')
+    compile files('libs/BaiduTraceSDK_v2_1_7.jar')
+    compile files('libs/baidumapapi_base_v3_6_0.jar')
+}

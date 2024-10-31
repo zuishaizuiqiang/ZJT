@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:layout_gravity="center_horizontal"
+        android:text="跑步进行中"
+        android:gravity="center_vertical|center_horizontal"
+        android:allowUndo="false"
+        android:autoText="false"
+        android:textColor="#ffffff"
+
+        android:textStyle="bold"
+        android:clickable="false"
+        android:editable="false"
+        android:textSize="25dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="定位中，正在用传感器记录跑步"
+        android:gravity="center_vertical|center_horizontal"
+        android:allowUndo="false"
+        android:autoText="false"
+
+        android:clickable="false"
+        android:editable="false"
+        android:textSize="15dp" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="186.87"
+        android:clickable="true" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format="%s"
+        android:textSize="50dp"
+        android:textColor="@color/WHITE"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.8">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.00"
+                android:id="@+id/DistanceTextView"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:inputType="numberDecimal"
+                android:numeric="decimal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="全程距离：米"
+                android:id="@+id/TextView0"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.00"
+                android:id="@+id/SpeedTextView"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:inputType="numberDecimal"
+                android:numeric="decimal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="均速：米/秒"
+                android:id="@+id/TextView1"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finishButton"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/finish_button"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        />
+
+
+</LinearLayout>
